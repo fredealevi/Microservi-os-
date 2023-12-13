@@ -19,7 +19,7 @@ namespace RestauranteService.RabbitMqClient
             _configuration = configuration;
 
             _connection = new ConnectionFactory()
-            // cria uma conexão RabbitMqHost na porta 8200
+            // cria uma conexão RabbitMqHost na porta 
             { HostName = _configuration["RabbitMqHost"], Port = Int32.Parse(_configuration["RabbitMqPort"]) }.CreateConnection();
             //cria um moelo de conexão
             _channel = _connection.CreateModel();
